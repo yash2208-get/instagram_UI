@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+// hrd@pepcoding.com
+import React, { useContext } from 'react';
+import Main_Page from './web/Main_Page';
+// import Contact_Page from './web/Contact_Page';
+// import About_Page from './web/About_Page';
+import {BrowserRouter,Routes,Route,Redirect} from 'react-router-dom'
+import Sigin_Page from './web/Sigin_Page';
+import Login_Page from './web/Login_Page';
+import My_Profile from './web/My_Profile';
+import { AuthContextProvider } from './Context_API/AuthContext';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login_Page/>}/>
+        <Route path="/sigin" element={<Sigin_Page/>}/>
+        <Route path="/profile" element={<My_Profile/>}/>
+        <Route path="/Home" element={<Main_Page></Main_Page>}/>
+      </Routes>
+    </BrowserRouter>
+   </AuthContextProvider>
   );
 }
-
 export default App;

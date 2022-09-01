@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#Contact
+{
+  /* width: 100%; */
+  height: 100vh;
+}
+.Contact{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E2E2E2;
+}
+::selection{
+  color: #fff;
+  background: #5372F0;
+}
+.wrapper1{
+  width: 380px;
+  padding: 10px;
+  background: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 0.2rem;
+  text-align: center;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.wrapper1 header img{
+  margin-top: 15px;
+}
+.wrapper1 header p{
+  font-size: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #bfbfbf;
+}
+.wrapper1 form{
+  margin: 40px 0;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+form .field{
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 40px;
+}
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+form .field .input-area{
+  height: 40px;
+  width: 75%;
+  position: relative;
+}
+form input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  caret-color: #5372F0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #5372F0;
+}
+form .field.shake input,
+form .field.error input{
+  border-color: #dc3545;
+}
+.field .input-area i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-area .icon{
+  left: 15px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+.input-area .error-icon{
+  right: 15px;
+  color: #dc3545;
+}
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #5372F0;
+}
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon{
+  color: #bfbfbf;
+}
+form input::placeholder{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+form .field .error-txt{
+  color: #dc3545;
+  text-align: left;
+  margin-top: 5px;
+}
+form .field .error{
+  display: none;
+}
+form .field.shake .error,
+form .field.error .error{
+  display: block;
+}
+ .pass-txt{
+  text-align: center;
+  margin-top: -10px;
+  /* margin-left: 35px; */
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+.wrapper1 a{
+  color: #5372F0;
+  text-decoration: none;
+}
+.wrapper1 a:hover{
+  text-decoration: underline;
+}
+form input[type="button"]{
+  height: 35px;
+  width: 75%;
+  margin-top: 10px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #5372F0;
+  opacity: 0.5;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+form input[type="button"]:hover{
+  background: #2c52ed;
+}
+.Footer_pager
+{
+    font-size: 13px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 15px;
+    color: #bfbfbf;
+}
