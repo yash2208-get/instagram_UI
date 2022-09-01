@@ -22,3 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 # Api_file.js
+echo "# instagram_UI" >> README.md
+# git init
+# git add README.md
+# git commit -m "first commit"
+# git branch -M main
+# git remote add origin https://github.com/yash2208-get/instagram_UI.git
+# git push -u origin main
